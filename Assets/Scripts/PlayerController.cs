@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moviment;
     private Rigidbody rb;
     public Camera mainCamera;
+    private Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,16 @@ public class PlayerController : MonoBehaviour
     {
         moviment.x = Input.GetAxisRaw("Horizontal");
         moviment.z = Input.GetAxisRaw("Vertical");
+        direction = new Vector3(moviment.x, 0, moviment.z);
+
+        if(direction != Vector3.zero)
+        {
+            GetComponent<Animator>().SetBool("isWalking", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isWalking", false);
+        }
 
         RotateTowardsMouse();
     }

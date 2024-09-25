@@ -10,7 +10,13 @@ public class GhostGeneratorController : MonoBehaviour
 
     void Update()
     {
-        GeneratorNewGhost();
+        countTime += Time.deltaTime;
+        if (countTime >= TimeGeneratorGhost)
+        {
+            GeneratorNewGhost();
+            countTime = 0;
+        }
+       
     }
 
     void GeneratorNewGhost()

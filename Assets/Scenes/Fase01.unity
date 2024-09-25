@@ -4194,7 +4194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ghost: {fileID: 8691050273452453077, guid: b84711bb4310a2a469d2358706068ab0, type: 3}
-  TimeGeneratorGhost: 1
+  TimeGeneratorGhost: 4
 --- !u!4 &1709544687
 Transform:
   m_ObjectHideFlags: 0
